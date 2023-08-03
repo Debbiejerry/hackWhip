@@ -3,7 +3,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /*applies the "border-b0x" box-sizing model to all elements, which includes padding and border in the element's total width and height*/
 }
 
 :root{
@@ -63,51 +63,58 @@ span{
 /* ------x------- Global Classes --------x-------- */
 
 /* ------- Header ---------*/
+/*The 'header' block contains styles for the main header of the webpage which is the navigation bar at the top*/
 header {
-    z-index: 999;
-    position: absolute;
+    z-index: 999; /*This sets a high stacking order for the header, ensuring it appears above other elements on the page*/
+    position: absolute; /*Positions the header absolutely, making it not to affect the normal document flow*/
     top: 0;
     left: 0;
     width: 100%;
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 100px;
+    display: flex;  /*Makes the header a flex container, allowing its child elements to be flex items*/
+    justify-content: space-between; /*Distributes the child elements in the header with space between them, pushing them to the edges*/
+    align-items: center; /*Centers the child elements vertically within the header*/
+    padding: 15px 100px; /*Sets 15px padding on the top and bottom and 100px on th eleft and right inside the header*/
     transition: 0.5s ease;
 }
 
+/*The '.menu' class is used to style the navigation menu within the header*/
 .menu {
-    position: relative;
+    position: relative; /*positions the menu relatively to its normal position, allowing absolute positioning fo rits child elements*/
 }
 
 .title {
     color: #fff; 
 }
 
+/*The '.page-nav' class is used to style the navigation links in the header*/
 .page-nav {
-    display: inline-flex;
-    position: relative;
+    display: inline-flex; /*This makes the navigation links inline and flexible, allowing them to be aligned in a row*/
+    position: relative; /*This positions the navigation links relatively to their normal position, allowing absolute positioning for their pseudo-elements*/
 }
 
+/*The '.page-nav a' styles the individual navigation links*/
 .page-nav a {
-    position: relative;
+    position: relative; /*This positions the navigation links relatively to their normal position, allowing absolute positioning for their pseudo-elements*/
     color: #fff;
     font-family: var(--Abel);
     margin-left: 30px;
     transition: 0.3s;
 }
 
+/*The '.page-nav a::after' styles the pseudo-element that creates the underline effect when hovering over a link*/
 .page-nav a::after{
-    content: "";
+    content: ""; /*Sets the content of the pseudo-element to an empty string. It is required for the pseudo-element to work*/
     width: 0;
-    height: 2px;
+    height: 2px; /*Together with the width property sets the initial width and height of the underline to zero, making it invisible by default*/
     background: #fff;
-    display: block;
-    margin: auto;
+    display: block; /*Makes the pseudo-element a block-level element, so it spans the full width of the link*/
+    margin: auto; /*Centers the pseudo-element horizontally within the link*/
     transition: 0.5s;
 }
+
+/*The '.page-nav a:hover::after' styles the pseudo element when hovering over a link*/
 .page-nav a:hover::after{
-    width: 100%;
+    width: 100%; /*Sets the width of the underline to 100%, making it visible and creating the underline effect*/
 }
 
 .nav-btn {
@@ -120,16 +127,18 @@ header {
 /* -------x--------- Header --------x---------*/
 
 /*-------- Section One ------------*/
+/*The '.home' is the main container for section one*/
 .home {
-    position: relative;
-    width: 100%;
+    position: relative; /*Sets the container to be positioned relative to its normal position*/
+    width: 100%; /*Makes the container span the full width of its parent*/
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: flex; /*Makes the container a flex container, allowing its children to be flex items*/
+    flex-direction: column; /*Arranges the flex items vertically in a column*/
+    justify-content: center; /*Centers the flex items verically within the container. It takes precedence from the flex-direction: column*/
     background: #2696E9;
 }
 
+/*The '.home:before' is a pseudo-element that creates a semi-transparent overlay on top of the background image*/
 .home:before{
     z-index: 777;
     content: '';
