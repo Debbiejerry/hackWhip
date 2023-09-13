@@ -14,6 +14,10 @@
     --Lexend:'Lexend', cursive;
     --Livvic:'Livvic', cursive;
 
+    /* gradient color   */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+
     /*---------- Theme colors -----------*/
     --text-grey: #3f4954;
     --text-light : #686666da;
@@ -30,7 +34,7 @@ a {
 }
 
 section {
-    padding: 100px 100px;
+    padding: 80px 80px;
 }
 
 h1{
@@ -45,7 +49,7 @@ h2{
 
 h3{
     font-family: var(--Abel);
-    font-size: 20px;
+    font-size: 1.3rem;
 }
 
 span{
@@ -55,7 +59,8 @@ span{
 .btn{
     border: none;
     border-radius: 20px;
-    padding: 12px 34px;
+    padding: 1rem 3rem;
+    font-size: 1rem;
     font-family: var(--Livvic);
     cursor: pointer;
 }
@@ -73,13 +78,13 @@ header {
     display: flex;  /*Makes the header a flex container, allowing its child elements to be flex items*/
     justify-content: space-between; /*Distributes the child elements in the header with space between them, pushing them to the edges*/
     align-items: center; /*Centers the child elements vertically within the header*/
-    padding: 15px 100px; /*Sets 15px padding on the top and bottom and 100px on th eleft and right inside the header*/
+    padding: 25px 100px; /*Sets 15px padding on the top and bottom and 100px on th eleft and right inside the header*/
     transition: 0.5s ease;
 }
 
 /*The '.menu' class is used to style the navigation menu within the header*/
 .menu {
-    position: relative; /*positions the menu relatively to its normal position, allowing absolute positioning fo rits child elements*/
+    position: relative; /*positions the menu relatively to its normal position, allowing absolute positioning for its child elements*/
 }
 
 .title {
@@ -134,7 +139,7 @@ header {
     min-height: 100vh;
     display: flex; /*Makes the container a flex container, allowing its children to be flex items*/
     flex-direction: column; /*Arranges the flex items vertically in a column*/
-    justify-content: center; /*Centers the flex items verically within the container. It takes precedence from the flex-direction: column*/
+    justify-content: center; /*Centers the flex items vertically within the container. It takes precedence from the flex-direction: column*/
     background: #2696E9;
 }
 
@@ -270,6 +275,63 @@ header {
     transition-property: clip-path;
 }
 /*--------x--------- Section One ----------x---------*/
+
+/*---------- Blog Carousel ------------*/
+.blog {
+    background: url(../assets/Abract01.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-size: 65%;
+}
+
+.blog-post{
+    padding-top: 6rem;
+}
+
+.blog-content {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   width: 80%;
+   margin: 3rem 2rem;
+   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-title {
+    padding: 2rem 0;
+}
+
+.btn-blog {
+    padding: .7rem 2rem;
+    background: var(--sky);
+    margin: .5rem;
+}
+
+span {
+    display: block;
+}
+
+.owl-nav {
+    position: absolute;
+    top: 0%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next{
+    color: var(--text-grey);
+    background: transparent;
+    font-size: 2rem;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover{
+    background: transparent;
+    color: var(--text-grey);
+}
+/*-------x-------- Blog Carousel ----------x-------*/
 
 @media (max-width: 1040px){
     header {
