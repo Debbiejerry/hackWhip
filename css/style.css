@@ -520,6 +520,30 @@ footer.footer {
     position: relative;
 }
 
+footer.footer .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer.footer .container > div {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 2rem .9rem;
+}
+
+footer.footer .container h2 {
+    color: var(--white);
+}
+
+footer.footer .container .newsletter .form-element {
+    background: black;
+    display: inline-block;
+}
+
+footer.footer .container .newsletter .form-element .input-element {
+    padding: .5rem .7rem;
+    border: none;
+}
 
 /*--------x-------- CSS for Footer ---------x--------*/
 
