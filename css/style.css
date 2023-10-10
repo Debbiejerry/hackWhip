@@ -507,7 +507,7 @@ main .post-content .post-title a {
     background: var(--sky);
     margin: .5rem;
     padding: .2rem 1rem;
-    border-radius: .5rem;
+    border-radius: 1rem;
 }
 /*----------x------- Sidebar --------x---------*/
 
