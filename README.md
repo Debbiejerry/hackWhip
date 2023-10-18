@@ -37,8 +37,8 @@ Follow these steps to get the project up and running on your local machine:
 
 ### Installation
 
-1. Clone the repository: git clone https://github.com/yourusername/hackwhip.git
-2. Navigate to the project directory: cd hackwhip
+1. Clone the repository: git clone https://github.com/Debbiejerry/hackWhip.git
+2. Navigate to the project directory: cd hackWhip
 3. Open the index.html file in your web browser, or use a local server to serve the project.
 
 ### Usage
