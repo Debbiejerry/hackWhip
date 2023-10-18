@@ -526,8 +526,8 @@ footer.footer .container {
 }
 
 footer.footer .container > div {
-    flex-grow: 1;
-    flex-basis: 0;
+    flex-grow: 1; /*The flex-grow property specifies how much an item will grow relative to other flexible items in the same container*/
+    flex-basis: 0; /*This property is used to specify the initial width of the flexible item*/
     padding: 2rem .9rem;
 }
 
@@ -543,6 +543,17 @@ footer.footer .container .newsletter .form-element {
 footer.footer .container .newsletter .form-element .input-element {
     padding: .5rem .7rem;
     border: none;
+    background: transparent;
+    font-family: var(--Josefin);
+    font-size: 1rem;
+    width: 75%;
+}
+
+footer.footer .container .newsletter .form-element span {
+    background: var(--sky);
+    color: var(--white);
+    padding: .5rem .7rem;
+    cursor: pointer;
 }
 
 /*--------x-------- CSS for Footer ---------x--------*/
