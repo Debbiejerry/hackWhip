@@ -76,4 +76,11 @@ $(document).ready(function(){
         nav: true,
         navText: [$(".owl-navigation .owl-nav-prev"),$(".owl-navigation .owl-nav-next")]
     });
+
+    // click the footer button to scroll to the top
+    $('.move-up span').click(function(){
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1000);
+    })
 });
