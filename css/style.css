@@ -598,9 +598,17 @@ footer.footer .move-up span:hover {
     color: var(--white);
     cursor: pointer;
 }
+
 /*-------x-------- CSS for Footer ---------x--------*/
 
-@media (max-width: 1040px){
+/*--------------- 1130px ----------------*/
+@media only screen and (max-width: 1130px){
+    
+}
+/*--------x------- 1130px --------x---------*/
+
+/*--------------- 1040px ----------------*/
+@media only screen and (max-width: 1040px){
     header {
         padding: 15px 20px;
     }
@@ -680,3 +688,4 @@ footer.footer .move-up span:hover {
     
     
 } 
+/*---------x---------- 1040px -----------x----------*/
