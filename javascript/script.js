@@ -66,6 +66,17 @@ function autoSlide() {
 }
 
 // JQuery
+// Responsive variable
+const responsive = {
+    320: {
+        items: 1
+    },
+    520: {
+        items: 2
+    } 
+}
+
+// Jquery Code
 $(document).ready(function(){
     // owl-carousel for blog
     $('.owl-carousel').owlCarousel({
@@ -74,7 +85,8 @@ $(document).ready(function(){
         autoplayTimeout: 3000, //sets time duration for slide to 3s
         dots: false,
         nav: true,
-        navText: [$(".owl-navigation .owl-nav-prev"),$(".owl-navigation .owl-nav-next")]
+        navText: [$(".owl-navigation .owl-nav-prev"),$(".owl-navigation .owl-nav-next")],
+        responsive: responsive
     });
 
     // click the footer button to scroll to the top
