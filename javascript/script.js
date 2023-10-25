@@ -68,12 +68,18 @@ function autoSlide() {
 // JQuery
 // Responsive variable
 const responsive = {
+    0: {
+        items: 1
+    },
     320: {
         items: 1
     },
     520: {
         items: 2
-    } 
+    },
+    960: {
+        items: 3
+    }
 }
 
 // Jquery Code
